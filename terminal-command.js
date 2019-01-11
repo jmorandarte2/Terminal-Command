@@ -11,11 +11,15 @@ module.exports.ls = () => {
 };
 
 module.exports.touch = () => {
-  fs.writeFileSync('sample.txt', 'You have a new file!');
+  var fileName = 'sample.txt'; 
+
+  fs.writeFileSync(fileName, 'You have a new file!');
 }
- 
+
   module.exports.mkdir = () => {
-    fs.mkdir('New Folder', function(){
+    var folderName = 'New Folder';
+
+    fs.mkdir(folderName, function(){
       console.log('success')
     });
   };
